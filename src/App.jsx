@@ -6,7 +6,7 @@ import About from "./Components/About/About";
 import Blogs from "./Components/Blogs/Blogs";
 import MyWork from "./Components/MyWork/MyWork";
 import AllBlogs from "./Components/AllBlogs/AllBlogs";
-import BlogPost from "./Components/BlogPost/BlogPost"; // Create this component
+import BlogPost from "./Components/BlogPost/BlogPost";
 
 const App = () => {
   return (
@@ -19,13 +19,13 @@ const App = () => {
             <>
               <Hero />
               <About />
-              <Blogs />
+              {/* <Blogs /> */}
               <MyWork />
             </>
           }
         />
-        <Route path="/all-blogs" element={<AllBlogs />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
+        {/* <Route path="/all-blogs" element={<AllBlogs />} /> */}
+        {/* <Route path="/blog/:id" element={<BlogPost />} /> */}
       </Routes>
     </Router>
   );

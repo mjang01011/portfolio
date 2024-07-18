@@ -4,6 +4,12 @@ import theme_pattern from "../../assets/theme_pattern.svg";
 import profile_img from "../../assets/profile_img.svg";
 
 const About = () => {
+  let skills = [
+    "Python (PyTorch, Pandas, NumPy, Scikit-learn)",
+    "Java",
+    "Javascript (React.js, Express.js)",
+    "SQL, MongoDB",
+  ];
   return (
     <div className="about">
       <div className="about-title">
@@ -12,7 +18,7 @@ const About = () => {
       </div>
       <div className="about-sections">
         {/* <div className="about-left"> */}
-          {/* <img src={profile_img} alt="" /> */}
+        {/* <img src={profile_img} alt="" /> */}
         {/* </div> */}
         <div className="about-right">
           <div className="about-para">
@@ -34,42 +40,14 @@ const About = () => {
               people and bring a sense of awe and excitement into their lives.
             </p>
           </div>
-          {/* <div className="about-skills">
-            <div className="about-skill">
-              <p>Python</p>
-              <hr style={{ width: "50%" }}></hr>
-            </div>
-            <div className="about-skill">
-              <p>Java</p>
-              <hr style={{ width: "60%" }}></hr>
-            </div>
-            <div className="about-skill">
-              <p>PyTorch</p>
-              <hr style={{ width: "70%" }}></hr>
-            </div>
-            <div className="about-skill">
-              <p>Javascript</p>
-              <hr style={{ width: "80%" }}></hr>
-            </div>
-          </div> */}
         </div>
       </div>
-      {/* <div className="about-achievements">
-        <div className="about-achievement">
-          <h1>10+</h1>
-          <p>YEARS OF EXPERIENCE</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>90+</h1>
-          <p>PROJECTS COMPLETED</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>15+</h1>
-          <p>HAPPY CLIENTS</p>
-        </div>
-      </div> */}
+      <div className="about-skills">
+        <h1>Tools</h1>
+        {skills.map((skill, index) => {
+          return <div key={index} className="about-skill">{skill}</div>;
+        })}
+      </div>
     </div>
   );
 };

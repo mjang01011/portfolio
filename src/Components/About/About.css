@@ -43,30 +43,24 @@
   font-weight: 500;
 }
 
-.about-skills {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.about-skills h1{
+  font-size: 80px;
+  font-weight: 800;
 }
 
 .about-skill {
   display: flex;
-  gap: 50px;
-  align-items: center;
-  transition: 0.3s;
-}
-
-/* .about-skill p {
-  min-width: 150px;
+  flex-direction: column;
+  gap: 20px;
   font-size: 24px;
   font-weight: 500;
-} */
+}
 
 .about-skill hr {
-    outline: none;
-    border: none;
-    width: 50%;
-    height: 8px;
-    border-radius: 50px;
-    background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  outline: none;
+  border: none;
+  width: 50%;
+  height: 8px;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
 }
