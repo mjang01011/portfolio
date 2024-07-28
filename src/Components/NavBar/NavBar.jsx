@@ -16,11 +16,11 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <ul className="nav-menu">
-        <li>Home</li>
+        <li onClick={() => scrollToSection("hero")}>Home</li>
         <li onClick={() => scrollToSection("about")}>About Me</li>
         {/* <li onClick={() => scrollToSection('blogs')}>Blogs</li> */}
+        <li onClick={() => scrollToSection("skills")}>Skills</li>
         <li onClick={() => scrollToSection("mywork")}>My Work</li>
-        <li onClick={() => scrollToSection("contact")}>Contact</li>
       </ul>
       <div className="nav-connect">Connect With Me</div>
     </div>

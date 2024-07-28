@@ -2,6 +2,7 @@ import "./MyWork.css";
 import theme_pattern from "../../assets/brush_purple.png";
 import mywork_data from "../../assets/mywork_data";
 import arrow_icon from "../../assets/arrow_icon.svg";
+import { Link } from "react-router-dom";
 
 const MyWork = () => {
   return (
@@ -14,21 +15,29 @@ const MyWork = () => {
         {mywork_data.map((work, index) => {
           return (
             <div key={index} className="image-wrapper">
-              <img src={work.img} alt="" />
-              <div className="overlay">
-                <div className="overlay-title">
-                  {work.name}
-                  <div className="overlay-stack">{work.stack}</div>
+              <Link to={work.link} target="_blank" rel="noopener noreferrer">
+                <img src={work.img} alt="" />
+                <div className="overlay">
+                  <div className="overlay-title">
+                    {work.name}
+                    <div className="overlay-stack">{work.stack}</div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           );
         })}
       </div>
-      <div className="mywork-showmore">
-        <p>Show More</p>
-        <img src={arrow_icon} alt="" />
-      </div>
+      <Link
+        to="https://github.com/mjang01011"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="mywork-showmore">
+          <p>View my GitHub</p>
+          <img src={arrow_icon} alt="" />
+        </div>
+      </Link>
     </div>
   );
 };

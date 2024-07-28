@@ -18,7 +18,8 @@ const About = () => {
               I am a passionate technologist with a keen interest in the wonders
               of both the digital and physical worlds. My journey spans the
               realms of machine learning, software development,
-              astrophotography, and even the art of magic.
+              astrophotography, and even the art of magic. Prior to my engineering studies,
+              I was involved in astrophysics research internships.
             </p>
             <p>
               Apart from studies, you will often find me gazing at the night sky

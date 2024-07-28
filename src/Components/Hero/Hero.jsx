@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
       {/* <img src={profile_img} alt="" /> */}
       <h1>
         <span>Michael Jang</span>
@@ -17,10 +17,18 @@ const Hero = () => {
         <span>machine learning</span>.
       </p>
       <div className="logo">
-        <Link to="https://www.linkedin.com/in/michaeljkjang/">
+        <Link
+          to="https://www.linkedin.com/in/michaeljkjang/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={logo_linkedin} alt="LinkedIn" />
         </Link>
-        <Link to="https://github.com/mjang01011">
+        <Link
+          to="https://github.com/mjang01011"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={logo_github} alt="GitHub" />
         </Link>
       </div>

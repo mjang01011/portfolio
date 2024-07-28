@@ -1,23 +1,23 @@
-import "./Tools.css";
+import "./Skills.css";
 import brush_lightpurple from "../../assets/brush_lightpurple.png";
 
-const Tools = () => {
+const Skills = () => {
   let skills = [
     "Python (PyTorch, Pandas, NumPy, Scikit-learn)",
     "Java",
-    "Javascript (React.js, Express.js)",
+    "Javascript (React.js, Express.js, Node.js)",
     "SQL, MongoDB",
   ];
   return (
-    <div className="tools">
-      <div className="tools-title">
-        <h1>Tools</h1>
+    <div className="skills" id="skills">
+      <div className="skills-title">
+        <h1>Skills</h1>
         <img src={brush_lightpurple} alt="" />
       </div>
-      <div>
+      <div className="skill-wrapper">
         {skills.map((skill, index) => {
           return (
-            <div key={index} className="tool">
+            <div key={index} className="skill">
               {skill}
             </div>
           );
@@ -27,4 +27,4 @@ const Tools = () => {
   );
 };
 
-export default Tools;
+export default Skills;
