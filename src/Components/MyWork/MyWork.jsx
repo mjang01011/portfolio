@@ -5,14 +5,24 @@ import arrow_icon from "../../assets/arrow_icon.svg";
 
 const MyWork = () => {
   return (
-    <div className="mywork">
+    <div id="mywork" className="mywork">
       <div className="mywork-title">
         <h1>My latest work</h1>
         <img src={theme_pattern} alt="" />
       </div>
-      <div className="mywork-container">
+      <div className="mywork-container" id="mywork-container">
         {mywork_data.map((work, index) => {
-          return <img key={index} src={work.w_img} alt="" />;
+          return (
+            <div key={index} className="image-wrapper">
+              <img src={work.img} alt="" />
+              <div className="overlay">
+                <div className="overlay-title">
+                  {work.name}
+                  <div className="overlay-stack">{work.stack}</div>
+                </div>
+              </div>
+            </div>
+          );
         })}
       </div>
       <div className="mywork-showmore">
@@ -24,4 +34,3 @@ const MyWork = () => {
 };
 
 export default MyWork;
-

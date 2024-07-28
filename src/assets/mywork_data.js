@@ -7,28 +7,34 @@ import project_ece480 from '../assets/project_ece480.png'
 
 const mywork_data = [
     {
-        w_name:"Travel Planner",
-        w_img:project_travel_planner
+        name:"Travel Planner",
+        img:project_travel_planner,
+        stack: "Python, LangChain, Streamlit, OpenAI, Gemini, Google Maps, MongoDB"
     },
     {
-        w_name:"Evalutation of Self-Supervised Learning Frameworks: SimCLR and RotNet",
-        w_img:project_ece661
+        name:"Evalutation of Self-Supervised Learning Frameworks: SimCLR and RotNet",
+        img:project_ece661,
+        stack: "Python (PyTorch), WanDB"
     },
     {
-        w_name:"Mini Amazon",
-        w_img:project_cs316
+        name:"Mini Amazon",
+        img:project_cs316,
+        stack: "MongoDB, Express.js, React.js, Node.js"
     },
     {
-        w_name:"Brain-Computer Interface Movement Decoding",
-        w_img:project_ece580_2
+        name:"Brain-Computer Interface Movement Decoding",
+        img:project_ece580_2,
+        stack: "Python (Scikit-learn)"
     },
     {
-        w_name:"Compressed Sensing Image Recovery",
-        w_img:project_ece580_1
+        name:"Compressed Sensing Image Recovery",
+        img:project_ece580_1,
+        stack: "Python (Scikit-learn)"
     },
     {
-        w_name:"Spoken Arabic Digit Recognition",
-        w_img:project_ece480
+        name:"Spoken Arabic Digit Recognition",
+        img:project_ece480,
+        stack: "Python (Scikit-learn)"
     },
 ]
  

@@ -1,19 +1,30 @@
-// import React from 'react'
-import './NavBar.css'
+import "./NavBar.css";
 
 const NavBar = () => {
-  return (
-    <div className='navbar'>
-        <ul className="nav-menu">
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Blogs</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
-        </ul>
-        <div className="nav-connect">Connect With Me</div>
-    </div>
-  )
-}
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    const headerOffset = 80;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-export default NavBar
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div className="navbar">
+      <ul className="nav-menu">
+        <li>Home</li>
+        <li onClick={() => scrollToSection("about")}>About Me</li>
+        {/* <li onClick={() => scrollToSection('blogs')}>Blogs</li> */}
+        <li onClick={() => scrollToSection("mywork")}>My Work</li>
+        <li onClick={() => scrollToSection("contact")}>Contact</li>
+      </ul>
+      <div className="nav-connect">Connect With Me</div>
+    </div>
+  );
+};
+
+export default NavBar;
