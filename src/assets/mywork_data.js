@@ -1,4 +1,4 @@
-import project_travel_planner from '../assets/project_1.svg'
+import project_travel_planner from '../assets/project_travel_planner.png'
 import project_ece661 from '../assets/project_ece661.png'
 import project_cs316 from '../assets/project_3.svg'
 import project_ece580_2 from '../assets/project_ece580_2.png'

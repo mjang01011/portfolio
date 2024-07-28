@@ -14,13 +14,14 @@
 .about-title h1 {
   padding: 0px 30px;
   font-size: 80px;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 .about-title img {
+  width: 45%;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 25%;
+  right: -3%;
   z-index: -1;
 }
 
@@ -38,29 +39,10 @@
 .about-para {
   display: flex;
   flex-direction: column;
+  text-align: justify;
   gap: 20px;
+  padding: 0px 150px;
   font-size: 24px;
-  font-weight: 500;
-}
-
-.about-skills h1{
-  font-size: 80px;
-  font-weight: 800;
-}
-
-.about-skill {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.about-skill hr {
-  outline: none;
-  border: none;
-  width: 50%;
-  height: 8px;
-  border-radius: 50px;
-  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  font-weight: 200;
+  line-height: 35px;
 }

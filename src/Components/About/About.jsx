@@ -1,20 +1,12 @@
-import React from "react";
 import "./About.css";
-import theme_pattern from "../../assets/theme_pattern.svg";
-import profile_img from "../../assets/profile_img.svg";
+import brush_skyblue from "../../assets/brush_skyblue.png";
 
 const About = () => {
-  let skills = [
-    "Python (PyTorch, Pandas, NumPy, Scikit-learn)",
-    "Java",
-    "Javascript (React.js, Express.js)",
-    "SQL, MongoDB",
-  ];
   return (
     <div className="about">
       <div className="about-title">
         <h1>About Me</h1>
-        <img src={theme_pattern} alt="" />
+        <img src={brush_skyblue} alt="" />
       </div>
       <div className="about-sections">
         {/* <div className="about-left"> */}
@@ -41,12 +33,6 @@ const About = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="about-skills">
-        <h1>Tools</h1>
-        {skills.map((skill, index) => {
-          return <div key={index} className="about-skill">{skill}</div>;
-        })}
       </div>
     </div>
   );

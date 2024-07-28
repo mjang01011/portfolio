@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import Hero from "./Components/Hero/Hero";
 import About from "./Components/About/About";
+import Tools from "./Components/Tools/Tools";
 import Blogs from "./Components/Blogs/Blogs";
 import MyWork from "./Components/MyWork/MyWork";
 import AllBlogs from "./Components/AllBlogs/AllBlogs";
@@ -19,6 +20,7 @@ const App = () => {
             <>
               <Hero />
               <About />
+              <Tools />
               {/* <Blogs /> */}
               <MyWork />
             </>
