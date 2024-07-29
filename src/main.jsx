@@ -7,7 +7,7 @@ const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <BrowserRouter basename="/portfolio-website/">
+  <BrowserRouter basename="/">
     <App />
   </BrowserRouter>
 );
