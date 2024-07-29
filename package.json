@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://mjang01011.github.io/portfolio-website",
+  "homepage": "https://mjang01011.github.io/portfolio-website/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
