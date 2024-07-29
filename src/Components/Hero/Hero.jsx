@@ -11,7 +11,7 @@ const Hero = () => {
         <span>Michael Jang</span>
       </h1>
       <p>
-        I'm a senior at Duke University majoring in{" "}
+        I&apos;m a senior at Duke University majoring in{" "}
         <span>Electrical Computer Engineering</span> and{" "}
         <span>Computer Science</span> with a concentration in{" "}
         <span>machine learning</span>.

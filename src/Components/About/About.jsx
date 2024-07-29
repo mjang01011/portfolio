@@ -18,19 +18,26 @@ const About = () => {
               I am a passionate technologist with a keen interest in the wonders
               of both the digital and physical worlds. My journey spans the
               realms of machine learning, software development,
-              astrophotography, and even the art of magic. Prior to my engineering studies,
-              I was involved in astrophysics research internships.
+              astrophotography, and even the art of magic. Prior to my
+              engineering studies, I was involved in astrophysics research
+              internships.
+            </p>
+            <p>
+              I thrive in environments where collaboration, continuous learning,
+              and development are encouraged, and I am always seeking
+              opportunities to expand my skillset by exploring and integrating
+              new tools and methodologies into my work.
             </p>
             <p>
               Apart from studies, you will often find me gazing at the night sky
-              with my camera in hand. Astrophotography allows me to combine my
-              love for technology and the cosmos, capturing the beauty of
-              distant galaxies, star clusters, and nebulae. It’s a humbling
-              experience that constantly reminds me of the vastness of the
-              universe and our small, yet significant place within it. Magic has
-              also been a source of wonder and joy in my life. Performing magic
-              tricks is more than just a hobby; it’s a way to connect with
-              people and bring a sense of awe and excitement into their lives.
+              with my telescope. Astrophotography allows me to combine my love
+              for technology and the cosmos, capturing the beauty of distant
+              deep sky objects. It’s a humbling experience that constantly
+              reminds me of the vastness of the universe and our small, yet
+              significant place within it. Magic has also been a source of
+              wonder and joy in my life. Performing magic tricks is more than
+              just a hobby; it’s a way to connect with people and bring a sense
+              of awe and excitement into their lives.
             </p>
           </div>
         </div>
