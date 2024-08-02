@@ -53,6 +53,11 @@
   transform: scale(1.15);
 }
 
+.link {
+  text-decoration: None;
+}
+
+
 .hero-action {
   display: flex;
   align-items: center;
@@ -62,6 +67,7 @@
 }
 
 .hero-connect {
+  color: #FFFFFF;
   padding: 25px 45px;
   border-radius: 50px;
   border: 2px solid #fff;
@@ -70,6 +76,7 @@
 }
 
 .hero-resume {
+  color: #FFFFFF;
   padding: 25px 75px;
   border-radius: 50px;
   border: 2px solid #fff;

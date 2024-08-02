@@ -18,6 +18,7 @@ const Hero = () => {
       </p>
       <div className="logo">
         <Link
+          className="link"
           to="https://www.linkedin.com/in/michaeljkjang/"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,6 +26,7 @@ const Hero = () => {
           <img src={logo_linkedin} alt="LinkedIn" />
         </Link>
         <Link
+          className="link"
           to="https://github.com/mjang01011"
           target="_blank"
           rel="noopener noreferrer"
@@ -33,8 +35,15 @@ const Hero = () => {
         </Link>
       </div>
       <div className="hero-action">
-        <div className="hero-connect">Connect With Me</div>
-        <div className="hero-resume">My Resume</div>
+        {/* <div className="hero-connect">Connect With Me</div> */}
+        <Link
+          className="link"
+          to="https://drive.google.com/file/d/18DUDFr2Jk3W8arpDljsyB3YFM920DAHo/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="hero-resume">My Resume</div>
+        </Link>
       </div>
     </div>
   );

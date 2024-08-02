@@ -1,4 +1,7 @@
 import "./NavBar.css";
+import logo_github from "../../assets/logo_github.png";
+import logo_linkedin from "../../assets/logo_linkedin.png";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const scrollToSection = (id) => {
@@ -22,10 +25,27 @@ const NavBar = () => {
         <li onClick={() => scrollToSection("skills")}>Skills</li>
         <li onClick={() => scrollToSection("mywork")}>My Work</li>
       </ul>
-      <div className="nav-connect">Connect With Me</div>
+      {/* <div className="nav-connect">Connect With Me</div> */}
+      <div className="nav-logo">
+        <Link
+          className="nav-link"
+          to="https://www.linkedin.com/in/michaeljkjang/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={logo_linkedin} alt="LinkedIn" />
+        </Link>
+        <Link
+          className="nav-link"
+          to="https://github.com/mjang01011"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={logo_github} alt="GitHub" />
+        </Link>
+      </div>
     </div>
   );
 };
 
 export default NavBar;
-
