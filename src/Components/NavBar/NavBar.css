@@ -1,27 +1,28 @@
 .navbar {
+  overflow: hidden;
+  position: fixed; 
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0 10px 10px 10px;
-  position: fixed;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  background-color: #050f0f;
-  z-index: 1;
   padding: 10px 20px;
+  background-color: #050f0f;
+  color: white;
+  z-index: 1; 
 }
 
 .nav-menu {
+  list-style-type: none;
   display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 60px;
-  font-size: 20px;
-  padding: 0;
-  margin-right: 50%;
+  gap: 20px;
 }
 
 .nav-menu li {
-  padding: 20px 20px;
+  cursor: pointer;
+  padding: 5px 10px;
   transition: transform 0.3s, color 0.3s;
 }
 
@@ -32,15 +33,15 @@
 }
 
 .nav-connect {
-  border-radius: 50px;
-  font-size: 22px;
+  padding: 5px 50px;
+  border-radius: 4px;
   cursor: pointer;
   transition: 0.5s;
-  white-space: nowrap;
 }
 
 .nav-connect:hover {
   transform: scale(1.05);
+  transition: 0.5s;
   color: #c2aff0;
 }
 
@@ -51,7 +52,33 @@
   }
 
   .nav-menu {
+    flex-direction: column;
     width: 100%;
-    gap: 20px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-connect {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-menu li {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .nav-connect {
+    font-size: 14px;
+    padding: 8px 10px;
   }
 }

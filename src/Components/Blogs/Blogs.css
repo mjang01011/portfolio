@@ -1,4 +1,4 @@
-.blogs {
+.blog {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,73 +7,70 @@
   margin: 80px 170px;
 }
 
-.blogs-title {
+.blog-title {
   position: relative;
 }
 
-.blogs-title h1 {
+.blog-title h1 {
   padding: 0px 30px;
   font-size: 80px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
-.blogs-title img {
+.blog-title img {
+  width: 100%;
   position: absolute;
-  bottom: 0;
+  top: 15%;
   right: 0;
   z-index: -1;
 }
 
-.blogs-format {
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.blog-wrapper {
+  transition: 0.5s;
+}
+
+.blog-wrapper h2 {
+  transition: 0.5s;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.blog-wrapper h2:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.5s;
+  color: #c2aff0;
+}
+
+.blog-showmore {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  padding: 60px;
-  border-radius: 10px;
+  gap: 15px;
+  border-radius: 50px;
   border: 2px solid white;
+  padding: 30px 60px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 80px;
   transition: 0.5s;
   cursor: pointer;
 }
 
-.blogs-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 80px;
+.blog-showmore:hover {
+  gap: 30px;
+  transition: 0.5s;
 }
 
-.blogs-format h3{
-    font-size: 28px;
-    font-weight: 600;
+.blog-link {
+  text-decoration: none;
 }
 
-.blogs-format h2 {
-    font-size: 38px;
-    font-weight: 800;
-    background: linear-gradient(270deg, #c2aff0 10%, #90e0ef 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.blogs-format p{
-    color: #d4d4d4;
-    font-size: 24px;
-    line-height: 40px;
-    max-width: 300px;
-}
-
-.blogs-readmore{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.blogs-format:hover {
-    border: 2px solid #ff00ff;
-    background-image: linear-gradient(45deg, #0c1b33, #d64045);
-    transform: scale(1.05);
-    transition: 0.5s;
+.blog-showmore {
+  color: #ffffff;
+  text-decoration: none;
 }

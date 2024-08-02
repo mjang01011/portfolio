@@ -111,7 +111,23 @@
   transition: 400ms ease 100ms;
 }
 
+.mywork-link {
+  text-decoration: none;
+}
+
 .mywork-showmore {
   color: #ffffff;
   text-decoration: none;
+}
+
+@media (max-width: 1700px) {
+  .mywork-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mywork-container {
+    grid-template-columns: 1fr;
+  }
 }

@@ -29,6 +29,7 @@ const MyWork = () => {
         })}
       </div>
       <Link
+        className="mywork-link"
         to="https://github.com/mjang01011"
         target="_blank"
         rel="noopener noreferrer"
