@@ -4,7 +4,7 @@ import Home from "./Components/Home/Home";
 import Blogs from "./Components/Blogs/Blogs";
 import BlogNavBar from "./Components/NavBar/BlogNavBar";
 import Footer from "./Components/Footer/Footer";
-// import IFrame from './utils/IFrame';
+import NotebookViewer from "./utils/NotebookViewer";
 
 const App = () => {
   return (
@@ -17,6 +17,14 @@ const App = () => {
           element={
             <>
               <BlogNavBar /> <Blogs />
+            </>
+          }
+        />
+        <Route
+          path="/blogs/:filename"
+          element={
+            <>
+              <BlogNavBar /> <NotebookViewer />
             </>
           }
         />

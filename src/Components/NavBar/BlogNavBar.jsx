@@ -11,6 +11,9 @@ const BlogNavBar = () => {
         <Link className="blog-nav-link" to="/">
           <li>Home</li>
         </Link>
+        <Link className="blog-nav-link" to="/blogs">
+          <li>Blogs</li>
+        </Link>
       </ul>
       <div className="blog-nav-logo">
         <Link

@@ -15,7 +15,7 @@ const blog = () => {
         {blog_data.map((blog, index) => {
           return (
             <div key={index} className="blog-wrapper">
-              <Link className="blog-link" to={"/blog/" + blog.link}>
+              <Link className="blog-link" to={"/blogs/" + blog.link}>
                 <h2>{blog.name}</h2>
               </Link>
             </div>
