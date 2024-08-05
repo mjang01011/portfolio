@@ -1,9 +1,14 @@
-import { useParams } from "react-router-dom";
-import "./NotebookViewer.css";
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import './NotebookViewer.css';
 
 const NotebookViewer = () => {
   const { filename } = useParams();
-  const src = filename ? `/portfolio/${filename}` : "";
+  const src = filename ? `/portfolio/${filename}` : '';
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="iframe-wrapper">

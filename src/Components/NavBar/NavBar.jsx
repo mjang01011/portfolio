@@ -23,9 +23,7 @@ const NavBar = () => {
         <li onClick={() => scrollToSection("about")}>About Me</li>
         <li onClick={() => scrollToSection("skills")}>Skills</li>
         <li onClick={() => scrollToSection("mywork")}>My Work</li>
-        <Link className="blogs-link" to="/blogs">
-          <li onClick={() => scrollToSection("blogs")}>Blogs</li>
-        </Link>
+        <li onClick={() => scrollToSection("blog")}>Blogs</li>
       </ul>
       {/* <div className="nav-connect">Connect With Me</div> */}
       <div className="nav-logo">
