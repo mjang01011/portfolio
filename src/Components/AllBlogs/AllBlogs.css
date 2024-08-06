@@ -25,6 +25,10 @@
   z-index: -1;
 }
 
+.section-title {
+  font-weight: 300;
+}
+
 .blog-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -67,6 +71,10 @@
 .blog-showmore:hover {
   gap: 30px;
   transition: 0.5s;
+}
+
+.blog-link {
+  text-decoration: none;
 }
 
 .blog-link ul {

@@ -10,7 +10,7 @@ const mywork_data = [
     name: "Travel Planner",
     img: project_travel_planner,
     stack: "Python, LangChain, Streamlit, OpenAI, Gemini, Google Maps, MongoDB",
-    link: ""
+    link: "https://github.com/mjang01011/TravelPlanner"
   
   },
   {

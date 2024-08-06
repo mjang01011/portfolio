@@ -19,8 +19,7 @@ const About = () => {
               of both the digital and physical worlds. My journey spans the
               realms of machine learning, software development,
               astrophotography, and even the art of magic. Prior to my
-              engineering studies, I was involved in astrophysics research
-              internships.
+              engineering studies, I was involved in astrophysics research experiences.
             </p>
             <p>
               I thrive in environments where collaboration, continuous learning,

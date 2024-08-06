@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
-import Blogs from "./Components/Blogs/Blogs";
+import AllBlogs from "./Components/AllBlogs/AllBlogs";
 import BlogNavBar from "./Components/NavBar/BlogNavBar";
 import Footer from "./Components/Footer/Footer";
 import NotebookViewer from "./utils/NotebookViewer";
@@ -16,7 +16,7 @@ const App = () => {
           path="/blogs"
           element={
             <>
-              <BlogNavBar /> <Blogs />
+              <BlogNavBar /> <AllBlogs />
             </>
           }
         />
