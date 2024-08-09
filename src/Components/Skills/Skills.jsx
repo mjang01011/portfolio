@@ -25,12 +25,12 @@ const Skills = () => {
       <div className="skill-wrapper">
         {skill_type.map((type, index) => {
           return (
-            <>
-              <div key={index} className="type">
+            <a key={index} >
+              <div className="type">
                 {type}
               </div>
               <div className="skill">{skills[index]}</div>
-            </>
+            </a>
           );
         })}
       </div>

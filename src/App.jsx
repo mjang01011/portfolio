@@ -16,7 +16,7 @@ const App = () => {
           path="/blogs"
           element={
             <>
-              <BlogNavBar isNotebook={false}/> <AllBlogs />
+              <BlogNavBar isNotebook={false} /> <AllBlogs />
             </>
           }
         />
@@ -24,7 +24,7 @@ const App = () => {
           path="/blogs/:filename"
           element={
             <>
-              <BlogNavBar isNotebook={true}/> <NotebookViewer />
+              <BlogNavBar isNotebook={true} /> <NotebookViewer />
             </>
           }
         />

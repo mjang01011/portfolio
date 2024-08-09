@@ -1,41 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import './MarkdownRenderer.css';
 
-const MarkdownRenderer = ({ file }) => {
-  const [content, setContent] = useState('');
-  const [error, setError] = useState(null);
+// eslint-disable-next-line react/prop-types
+const MarkdownRenderer = ({ fileName }) => {
+  const [markdown, setMarkdown] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const filePath = `/blogs/markdowns/${file}`;
-    console.log(`Attempting to fetch: ${filePath}`);
-    fetch(filePath)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Network response was not ok: ${response.statusText}`);
+    const fetchMarkdown = async () => {
+      try {
+        const response = await fetch(`./public/blogs/markdowns/${fileName}`);
+        if (response.ok) {
+          const text = await response.text();
+          setMarkdown(text);
+        } else {
+          console.error('Failed to fetch markdown file:', response.statusText);
         }
-        
-        return response.text();
-      })
-      .then((text) => {
-        console.log('Fetched content:', text);
-        setContent(text);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error('Error fetching markdown file:', error);
-        setError(error.message);
-      });
-  }, [file]);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+    fetchMarkdown();
+  }, [fileName]);
+
+  if (loading) return <p>Loading...</p>;
 
   return (
-    <div className="markdown-body">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-        {content}
-      </ReactMarkdown>
+    <div className="markdown-container">
+      <ReactMarkdown>{markdown}</ReactMarkdown>
     </div>
   );
 };
