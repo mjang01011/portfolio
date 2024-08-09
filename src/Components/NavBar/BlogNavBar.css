@@ -37,6 +37,16 @@
   cursor: pointer;
 }
 
+/* .open-github-wrapper {
+  padding: 5px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+} */
+
+
 .blog-nav-logo {
   padding: 5px 60px;
   display: flex;
@@ -59,6 +69,29 @@
   transition: 0.5s;
 } 
 
+.open-github-wrapper {
+  text-decoration: none;
+  padding-right: 50px;
+}
+
+.open-github {
+  display: flex;
+  gap: 15px;
+  border-radius: 50px;
+  border: 2px solid white;
+  padding: 10px 25px;
+  font-size: px;
+  font-weight: 500;
+  transition: 0.5s;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.open-github:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
 /* .blog-nav-connect {
   padding: 5px 50px;
   border-radius: 4px;
@@ -71,41 +104,3 @@
   transition: 0.5s;
   color: #c2aff0;
 } */
-
-@media (max-width: 768px) {
-  .blog-navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .blog-nav-menu {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .blog-nav-menu li {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  /* .blog-nav-connect {
-    margin-top: 10px;
-  } */
-}
-
-@media (max-width: 480px) {
-  .blog-navbar {
-    padding: 10px;
-  }
-
-  .blog-nav-menu li {
-    font-size: 14px;
-    padding: 8px 0;
-  }
-/* 
-  .blog-nav-connect {
-    font-size: 14px;
-    padding: 8px 10px;
-  } */
-}
