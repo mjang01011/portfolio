@@ -14,7 +14,7 @@ const Blog = () => {
       <div className="blog-container" id="blog-container">
         {notebook_data.map((blog, index) => (
           <div key={index} className="blog-wrapper">
-            <Link className="blog-link" to={"/blogs/" + blog.link}>
+            <Link className="blog-link" to={"/blogs/notebooks/" + blog.link}>
               <h2>{blog.name}</h2>
               {blog.contents && blog.contents.length > 0 && (
                 <ul>

@@ -5,6 +5,8 @@ import AllBlogs from "./Components/AllBlogs/AllBlogs";
 import BlogNavBar from "./Components/NavBar/BlogNavBar";
 import Footer from "./Components/Footer/Footer";
 import NotebookViewer from "./utils/NotebookViewer";
+import MarkdownViewer from "./utils/MarkdownViewer";
+// import MarkdownRenderer from "./utils/MarkdownRenderer";
 
 const App = () => {
   return (
@@ -21,10 +23,18 @@ const App = () => {
           }
         />
         <Route
-          path="/blogs/:filename"
+          path="/blogs/notebooks/:filename"
           element={
             <>
               <BlogNavBar isNotebook={true} /> <NotebookViewer />
+            </>
+          }
+        />
+        <Route
+          path="/blogs/markdowns/:filename"
+          element={
+            <>
+              <BlogNavBar isNotebook={true} /> <MarkdownViewer />
             </>
           }
         />

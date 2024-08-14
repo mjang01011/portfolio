@@ -1,0 +1,124 @@
+.markdown-container {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #f2f2f2;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 95%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.markdown-container h1,
+.markdown-container h2,
+.markdown-container h3,
+.markdown-container h4,
+.markdown-container h5,
+.markdown-container h6 {
+  color: #e0e0e0;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.markdown-container h1 {
+  font-size: 2.5em;
+  border-bottom: 2px solid #90e0ef;
+  padding-bottom: 0.3em;
+}
+
+.markdown-container h2 {
+  font-size: 2em;
+}
+
+.markdown-container h3 {
+  font-size: 1.75em;
+}
+
+.markdown-container h4 {
+  font-size: 1.5em;
+}
+
+.markdown-container p {
+  margin-bottom: 1.2em;
+}
+
+.markdown-container a {
+  color: #1e90ff;
+  text-decoration: none;
+  border-bottom: 1px dotted #1e90ff;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.markdown-container ul,
+.markdown-container ol {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+}
+
+.markdown-container ul li,
+.markdown-container ol li {
+  margin-bottom: 0.5em;
+}
+
+.markdown-container blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  background-color: #333;
+  border-left: 5px solid #1e90ff;
+  font-style: italic;
+  color: #ccc;
+}
+
+.markdown-container code {
+  font-family: "Courier New", monospace;
+  background-color: #212121;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #f2f2f2;
+}
+
+.markdown-container pre {
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown-container pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.markdown-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5em 0;
+}
+
+.markdown-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.markdown-container table,
+.markdown-container th,
+.markdown-container td {
+  border: 1px solid #555;
+  padding: 10px;
+}
+
+.markdown-container th {
+  background-color: #333;
+  color: #f2f2f2;
+}
+
+.markdown-container td {
+  background-color: #1e1e1e;
+}

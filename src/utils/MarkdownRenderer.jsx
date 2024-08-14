@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import './MarkdownRenderer.css';
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkFrontmatter from "remark-frontmatter";
+import "./MarkdownRenderer.css";
 
-// eslint-disable-next-line react/prop-types
-const MarkdownRenderer = ({ fileName }) => {
-  const [markdown, setMarkdown] = useState('');
+const MarkdownRenderer = (fileName) => {
+  const [markdown, setMarkdown] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,10 +15,10 @@ const MarkdownRenderer = ({ fileName }) => {
           const text = await response.text();
           setMarkdown(text);
         } else {
-          console.error('Failed to fetch markdown file:', response.statusText);
+          console.error("Failed to fetch markdown file:", response.statusText);
         }
       } catch (error) {
-        console.error('Error fetching markdown file:', error);
+        console.error("Error fetching markdown file:", error);
       } finally {
         setLoading(false);
       }
@@ -31,7 +31,9 @@ const MarkdownRenderer = ({ fileName }) => {
 
   return (
     <div className="markdown-container">
-      <ReactMarkdown>{markdown}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkFrontmatter]}>
+        {markdown}
+      </ReactMarkdown>
     </div>
   );
 };
