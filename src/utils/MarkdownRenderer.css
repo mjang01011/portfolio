@@ -1,11 +1,11 @@
 .markdown-container {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.9;
   color: #f2f2f2;
   margin: 0 auto;
-  padding: 40px;
+  padding: 50px;
   border-radius: 8px;
-  max-width: 95%;
+  max-width: 90%;
   width: 100%;
   box-sizing: border-box;
 }
@@ -17,32 +17,34 @@
 .markdown-container h5,
 .markdown-container h6 {
   color: #e0e0e0;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-top: 1.75em;
+  margin-bottom: 0.6em;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
 .markdown-container h1 {
-  font-size: 2.5em;
+  font-size: 2.7em;
   border-bottom: 2px solid #90e0ef;
   padding-bottom: 0.3em;
 }
 
 .markdown-container h2 {
-  font-size: 2em;
+  font-size: 2.2em;
 }
 
 .markdown-container h3 {
-  font-size: 1.75em;
+  font-size: 1.85em;
 }
 
 .markdown-container h4 {
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
-.markdown-container p {
-  margin-bottom: 1.2em;
+.markdown-container p{
+  font-size: 1.2em;
+  font-weight: 200;
+  margin-bottom: 1.5em;
 }
 
 .markdown-container a {
@@ -54,18 +56,18 @@
 
 .markdown-container ul,
 .markdown-container ol {
-  margin: 1.5em 0;
-  padding-left: 1.5em;
+  margin: 1.7em 0;
+  padding-left: 1.7em;
 }
 
 .markdown-container ul li,
 .markdown-container ol li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
 }
 
 .markdown-container blockquote {
-  margin: 1.5em 0;
-  padding: 1em 1.5em;
+  margin: 1.7em 0;
+  padding: 1.2em 1.7em;
   background-color: #333;
   border-left: 5px solid #1e90ff;
   font-style: italic;
@@ -75,9 +77,9 @@
 .markdown-container code {
   font-family: "Courier New", monospace;
   background-color: #212121;
-  padding: 0.2em 0.4em;
+  padding: 0.3em 0.6em;
   border-radius: 4px;
-  font-size: 0.9em;
+  font-size: 1em;
   color: #f2f2f2;
 }
 

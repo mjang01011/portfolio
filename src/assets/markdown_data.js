@@ -72,9 +72,9 @@ const markdown_data = [
     contents: []
   },
   {
-    name: "Supervised vs Unsupervised Learning",
+    name: "Types of Learning in ML",
     img: null,
-    link: "Supervised vs Unsupervised Learning.md",
+    link: "Supervised and Unsupervised Learning to Self-Supervised and Reinforcement Learning.md",
     contents: []
   }
 ];
