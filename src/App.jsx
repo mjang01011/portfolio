@@ -5,8 +5,7 @@ import AllBlogs from "./Components/AllBlogs/AllBlogs";
 import BlogNavBar from "./Components/NavBar/BlogNavBar";
 import Footer from "./Components/Footer/Footer";
 import NotebookViewer from "./utils/NotebookViewer";
-import MarkdownViewer from "./utils/MarkdownViewer";
-// import MarkdownRenderer from "./utils/MarkdownRenderer";
+import MarkdownRenderer from "./utils/MarkdownRenderer";
 
 const App = () => {
   return (
@@ -34,7 +33,7 @@ const App = () => {
           path="/blogs/markdowns/:filename"
           element={
             <>
-              <BlogNavBar isNotebook={true} /> <MarkdownViewer />
+              <BlogNavBar isNotebook={true} /> <MarkdownRenderer />
             </>
           }
         />

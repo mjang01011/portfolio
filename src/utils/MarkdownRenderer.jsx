@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkFrontmatter from "remark-frontmatter";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 import "./MarkdownRenderer.css";
 
-const MarkdownRenderer = (fileName) => {
+const MarkdownRenderer = () => {
+  const { filename } = useParams();
   const [markdown, setMarkdown] = useState("");
   const [loading, setLoading] = useState(true);
-
+  const src = filename ? `${filename}` : '';
+  
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const response = await fetch(`./public/blogs/markdowns/${fileName}`);
+        const response = await fetch(src);
         if (response.ok) {
           const text = await response.text();
           setMarkdown(text);
@@ -25,13 +31,15 @@ const MarkdownRenderer = (fileName) => {
     };
 
     fetchMarkdown();
-  }, [fileName]);
+  }, [src]);
 
   if (loading) return <p>Loading...</p>;
 
   return (
     <div className="markdown-container">
-      <ReactMarkdown remarkPlugins={[remarkFrontmatter]}>
+      <ReactMarkdown 
+        remarkPlugins={[remarkFrontmatter, remarkMath]} 
+        rehypePlugins={[rehypeKatex]}>
         {markdown}
       </ReactMarkdown>
     </div>
