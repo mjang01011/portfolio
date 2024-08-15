@@ -20,15 +20,13 @@ The more data we have, the better our models tend to perform. However, generatin
 
 1. **Pre-train the model with a pretext task**
 
-   ![image-20240520152141355](/public/blogs/markdowns/images/image-20240520152141355.png)
+   ![image-20240520152141355](https://github.com/mjang01011/portfolio/blob/main/public/blogs/markdowns/images/image-20240520152141355.png?raw=true)
 
    In this step, a random patch (blue rectangle) is chosen, and eight other patch locations around the blue patch are defined. We train our model so that, given a pair of the blue and one of the red patches, it predicts the correct location of the red patch. This task does not directly teach the model to classify a cat from other animals. However, it trains the model to understand the relative locations of a cat's features. The model trained on such a pretext task is called a pre-trained model. This pre-training helps in the next step of correctly classifying cat images.
 
 2. **Perform transfer learning to solve the downstream task**
 
    Now, we train the model with labeled data so that it correctly classifies the animal type. The intuition is that the pretext task allows our pre-trained model to learn meaningful representations of a cat, reducing the amount of data needed to differentiate cats from other animals. We can adjust the final parts of our model, such as appending a fully connected classification layer, to output one of the N animal classes and use standard supervised learning methods to learn the classification layer weights.
-
-This process can also be applied to natural language processing tasks, such as language translation. For example, if we want to train a model to translate English sentences into Korean but lack sufficient English-Korean pairs, we can mask a word in an English sentence and train our model to predict the masked word, helping it understand the language structure. This pre-training step can make the model more effective at handling actual translation tasks.
 
 In 2020, contrastive learning has been proposed as a useful pretext task. I have experience examining two SSL methods: SimCLR (Simple Contrastive Learning) and RotNet (Rotation Net). The paper, poster, and code repository can be found [here](https://github.com/mjang01011/Duke_ECE661_Final-Project-An_Evaluation_of_Self-Supervised_Learning_Method-SimCLR_and_RotNet).
 

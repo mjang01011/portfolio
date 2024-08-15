@@ -1,14 +1,10 @@
 # JWT vs Session vs OAuth
 
-These are three common methods used for managing authentication and authorization in web applications. Here’s a detailed comparison of each:
+These are three common methods used for managing authentication and authorization in web applications.
 
 ## JWT (JSON Web Tokens)
 
-### Overview:
-
 JWT is a compact, URL-safe token format that can be used for securely transmitting information between parties. The token is digitally signed using a secret or a public/private key pair.
-
-### How It Works:
 
 1. **Authentication**: User logs in and, upon successful authentication, receives a JWT.
 2. **Storage**: The client stores the JWT (usually in local storage or a cookie).
@@ -30,11 +26,7 @@ JWT is a compact, URL-safe token format that can be used for securely transmitti
 
 ## Session
 
-### Overview:
-
 Sessions store user information on the server-side and use a session ID to identify the user. The session ID is stored on the client-side, usually in a cookie.
-
-### How It Works:
 
 1. **Authentication**: User logs in and, upon successful authentication, the server creates a session and stores user information.
 2. **Storage**: A session ID is sent to the client and stored in a cookie.
@@ -55,11 +47,7 @@ Sessions store user information on the server-side and use a session ID to ident
 
 ## OAuth
 
-### Overview:
-
 OAuth is an open standard for access delegation, commonly used for token-based authentication and authorization. It allows third-party services to exchange user information without exposing user credentials.
-
-### How It Works:
 
 1. **Authorization**: User authorizes a third-party application to access their resources.
 2. **Access Token**: The third-party application receives an access token from the authorization server.
@@ -77,6 +65,8 @@ OAuth is an open standard for access delegation, commonly used for token-based a
 - **Complexity**: More complex to implement than JWT or sessions.
 - **Security**: Requires careful handling of access tokens to prevent unauthorized access.
 - **Dependency**: Relies on third-party authorization servers for token issuance and validation.
+
+Now, let's compare the three methods from different aspects:
 
 ### Main Functions:
 

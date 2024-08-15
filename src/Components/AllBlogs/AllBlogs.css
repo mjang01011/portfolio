@@ -26,7 +26,12 @@
 }
 
 .section-title {
+  font-size: 40px;
   font-weight: 300;
+  background: linear-gradient(270deg, #c2aff0 10%, #90e0ef 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .blog-container {

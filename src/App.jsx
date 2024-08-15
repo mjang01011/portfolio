@@ -33,7 +33,7 @@ const App = () => {
           path="/blogs/markdowns/:filename"
           element={
             <>
-              <BlogNavBar isNotebook={true} /> <MarkdownRenderer />
+              <BlogNavBar isNotebook={false} /> <MarkdownRenderer />
             </>
           }
         />
