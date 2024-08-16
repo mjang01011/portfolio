@@ -19,7 +19,7 @@ const About = () => {
               of both the digital and physical worlds. My journey spans the
               realms of machine learning, software development,
               astrophotography, and even the art of magic. Prior to my
-              engineering studies, I was involved in astrophysics research experiences.
+              engineering studies, I was involved in astrophysics research.
             </p>
             <p>
               I thrive in environments where collaboration, continuous learning,
@@ -35,7 +35,7 @@ const About = () => {
               reminds me of the vastness of the universe and our small, yet
               significant place within it. Magic has also been a source of
               wonder and joy in my life. Performing magic tricks is more than
-              just a hobby; it’s a way to connect with people and bring a sense
+              just a hobby. It’s a way to connect with people and bring a sense
               of awe and excitement into their lives.
             </p>
           </div>

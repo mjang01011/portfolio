@@ -1,4 +1,4 @@
-# VGGNet and Inception Networks (v1, v2, and v3)
+# VGGNet & Inception Net
 
 ## VGGNet
 
@@ -39,7 +39,7 @@
 - Complex architecture compared to VGGNet.
 - Implementation can be challenging.
 
-# Inception v2 and v3
+## Inception v2 and v3
 
 - Introduced in the paper "Rethinking the Inception Architecture for Computer Vision" (2015).
 
