@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypeRaw from "rehype-raw";
 import "katex/dist/katex.min.css";
 import "./MarkdownRenderer.css";
 
@@ -39,7 +40,8 @@ const MarkdownRenderer = () => {
     <div className="markdown-container">
       <ReactMarkdown 
         remarkPlugins={[remarkFrontmatter, remarkMath]} 
-        rehypePlugins={[rehypeKatex]}>
+        rehypePlugins={[rehypeKatex, rehypeRaw]}
+        >
         {markdown}
       </ReactMarkdown>
     </div>
