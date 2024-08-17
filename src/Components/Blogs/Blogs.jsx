@@ -29,7 +29,7 @@ const Blog = () => {
       </div>
       <Link className="blog-link" to="/blogs">
         <div className="blog-showmore">
-          <p>View my blogs</p>
+          <p>View all blogs</p>
           <img src={arrow_icon} alt="Arrow icon" />
         </div>
       </Link>
