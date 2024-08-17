@@ -34,6 +34,9 @@ In summary, the different subsets of data serve unique roles:
 - **Validation Data:** Used to tune hyperparameters and select the best model.
 - **Test Data:** Used to evaluate the model’s final performance.
 
-# K-Fold Cross Validation
+## K-Fold Cross Validation
+
+![K-Fold Cross Validation - Ultralytics YOLO Docs](https://user-images.githubusercontent.com/26833433/258589390-8d815058-ece8-48b9-a94e-0e1ab53ea0f6.png)
 
 If we have too few training data to even have a decently sized validation set, we can divide the training data in to 'k' parts and create k different sets of training and validation set pairs. We can calculate the average validation loss across the folds to determine the set of hyperparameters with the lowest loss.
+
