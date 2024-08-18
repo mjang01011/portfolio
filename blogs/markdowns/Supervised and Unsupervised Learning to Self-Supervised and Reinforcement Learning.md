@@ -1,7 +1,3 @@
----
-title: "Supervised and Unsupervised Learning to Self-Supervised and Reinforcement Learning" date: "2024-05-20" tags: ["example", "blog"] 
----
-
 # Types of Learning in ML
 
 This blog aims to provide a brief overview of the four types of learning in ML: 1) supervised, 2) unsupervised, 3) self-supervised, 4) reinforcement learning.

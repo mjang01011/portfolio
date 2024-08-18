@@ -1,7 +1,3 @@
----
-title: "Neural Networks" date: "2024-05-20" tags: ["example", "blog"] 
----
-
 # Neural Networks
 
 Neural networks are composed of neurons connected by edges. Each neuron receives inputs, and each edge has a weight that multiplies the input value. This value is then added to a bias term and passed through an activation function. The weights determine the importance of each neuron's input. The goal of a neural network is to learn the optimal set of weights and biases so that the model returns the desired output for a given input.
