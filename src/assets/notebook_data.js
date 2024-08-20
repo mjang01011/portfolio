@@ -21,9 +21,10 @@ const notebook_data = [
   {
     name: "Pruning",
     img: null,
-    link: "",
+    link: "Pruning.html",
     contents: [
       "Pruning by percentage",
+      "Finetune pruned model",
       "Iterative pruning",
       "Global iterative pruning"
     ]
@@ -42,6 +43,16 @@ const notebook_data = [
     ]
   },
   {
+    name: "Residual Neural Network (ResNet)",
+    img: null,
+    link: "ResNet.html",
+    contents: [
+      "ResNet18",
+      "CIFAR10 training",
+      "Learning rate decay",
+    ]
+  },
+  {
     name: "Convolutional Neural Networks",
     img: null,
     link: "Convolutional_Neural_Networks.html",
@@ -49,7 +60,6 @@ const notebook_data = [
       "Convolution basics",
       "CIFAR10 training",
       "CIFAR100 training",
-      "ResNet architecture"
     ]
   },
 ];

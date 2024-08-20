@@ -10,7 +10,7 @@ ML solutions generally do:
 
 Figure 1-2. Instead of requiring hand-specified patterns to calculate outputs, ML solutions learn patterns from inputs and outputs
 
-![image-20240810161636757](C:\Users\desti\AppData\Roaming\Typora\typora-user-images\image-20240810161636757.png)
+![image-20240810161636757](https://github.com/mjang01011/portfolio/blob/main/public/blogs/markdowns/images/image-20240810161636757.png?raw=true)
 
 During model development, training is the bottleneck. Once the model has been deployed, however, its job is to generate predictions, so inference is the bottleneck. Research usually prioritizes fast training, whereas production usually prioritizes fast inference. Research prioritizes high throughput whereas production prioritizes low latency. In case you need a refresh, latency refers to the time it takes from receiving a query to returning the result. Throughput refers to how many queries are processed within a specific period of time. For example, the average latency of Google Translate is the average time it takes from when a user clicks Translate to when the translation is shown, and the throughput is how many queries it processes and serves a second.
 
