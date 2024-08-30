@@ -14,7 +14,6 @@ const notebook_data = [
     link: "",
     contents: [
       "Fixed-point quantization",
-      "Quantizing pruned model",
       "Symmetric quantization"
     ]
   },
@@ -32,7 +31,7 @@ const notebook_data = [
   {
     name: "Adversarial Attack",
     img: null,
-    link: "",
+    link: "Adversarial_Attack.html",
     contents: [
       "White box attack",
       "Black box attack",
