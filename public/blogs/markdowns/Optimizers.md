@@ -39,7 +39,8 @@ SGD is similar to that of vanilla gradient descent, except now we update the mod
 ## Mini Batch Gradient Descent
 
 $$
-\theta := \theta - \eta \nabla_\theta J(\theta; x^{(i:i+n)}, y^{(i:i+n)})
+\theta := \theta - \eta \nabla_\theta J(\theta; x^{(i:i+n)}, y^{(i:i+n)})
+
 $$
 
 Instead of calculating the loss over a single training example to update the parameters, mini batch SGD updates the parameters after every batch with n samples. Now, the optimizer has less variance and noise as it progresses towards the minima.
@@ -128,6 +129,6 @@ The above algorithm may look complicated at first, but we come to realize that i
 
 The bottom chart summarizes the progression from gradient descent to Adam optimizer.
 
-![image](https://user-images.githubusercontent.com/79494088/137847104-fc73e10c-79a2-46ef-b00d-2fce4d5f4bae.png)
+![image](https://github.com/mjang01011/portfolio/blob/main/public/blogs/markdowns/images/image-optimizer.png?raw=true)
 
 Ruder, Sebastian. "An overview of gradient descent optimization algorithms." [arXiv:1609.04747](https://arxiv.org/abs/1609.04747) (2016) is another great source for understanding various optimizers. It also talks about AdaMax, Nadam, parallelizing SGD, and various strategies for optimizing SGD.
