@@ -38,7 +38,7 @@ const Hero = () => {
         {/* <div className="hero-connect">Connect With Me</div> */}
         <Link
           className="link"
-          to="https://drive.google.com/file/d/18DUDFr2Jk3W8arpDljsyB3YFM920DAHo/view?usp=sharing"
+          to="https://drive.google.com/file/d/168hnhI8Cb7SB4MEIcr2x76Sx1sP55Ich/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >

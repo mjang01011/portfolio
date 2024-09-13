@@ -6,18 +6,6 @@ const markdown_data = [
   //   contents: []
   // },
   {
-    name: "Reinforcement Learning with Human Feedback (RLHF)",
-    img: null, 
-    link: "RLHF.md",
-    contents: ["RLHF: What & Why", "Reinforcement Learning & Preparing Data", "Proximal Policy Optimization (PPO)", "KL Divergence Penalty", "Parameter Efficient Fine-Tuning (PEFT)"],
-  },
-  {
-    name: "Designing Machine Learning Systems",
-    img: null,
-    link: "Designing Machine Learning Systems.md",
-    contents: ["Notes from 'Designing Machine Learning Systems' by Chip Huyen"],
-  },
-  {
     name: "Optimizers",
     img: null,
     link: "Optimizers.md",
@@ -111,6 +99,18 @@ const markdown_data = [
     contents: [
       "clone, branch, checkout, status, add, commit, push, pull, revert, merge, diff",
     ],
+  },
+  {
+    name: "Reinforcement Learning with Human Feedback (RLHF)",
+    img: null, 
+    link: "RLHF.md",
+    contents: ["RLHF: What & Why", "Reinforcement Learning & Preparing Data", "Proximal Policy Optimization (PPO)", "KL Divergence Penalty", "Parameter Efficient Fine-Tuning (PEFT)"],
+  },
+  {
+    name: "Designing Machine Learning Systems",
+    img: null,
+    link: "Designing Machine Learning Systems.md",
+    contents: ["Notes from 'Designing Machine Learning Systems' by Chip Huyen"],
   },
 ];
 
