@@ -1,17 +1,8 @@
 const notebook_data = [
   {
-    name: "UNet: Chest CT Segmentation",
-    img: null,
-    link: "unet.html",
-    contents: [
-      "UNet implementation",
-      "Dice coefficient"
-    ]
-  },
-  {
     name: "Quantization",
     img: null,
-    link: "",
+    link: "Quantization.html",
     contents: [
       "Fixed-point quantization",
       "Symmetric quantization"
@@ -59,6 +50,15 @@ const notebook_data = [
       "Convolution basics",
       "CIFAR10 training",
       "CIFAR100 training",
+    ]
+  },
+  {
+    name: "UNet: Chest CT Segmentation",
+    img: null,
+    link: "unet.html",
+    contents: [
+      "UNet implementation",
+      "Dice coefficient"
     ]
   },
 ];
