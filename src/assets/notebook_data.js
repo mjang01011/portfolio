@@ -1,5 +1,14 @@
 const notebook_data = [
   {
+    name: "Sentiment Analysis",
+    img: null,
+    link: "Examining_Embedding_Vectors_with_Sentiment_Analysis_Model.html",
+    contents: [
+      "Sentiment Analysis Model",
+      "Examining Learned Embedding Vectors",
+    ]
+  },
+  {
     name: "Quantization",
     img: null,
     link: "Quantization.html",
