@@ -1,12 +1,13 @@
 import "./Hero.css";
 import logo_github from "../../assets/logo_github.png";
 import logo_linkedin from "../../assets/logo_linkedin.png";
+import profile_img from "../../assets/headshot.jpg"
 import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <div className="hero" id="hero">
-      {/* <img src={profile_img} alt="" /> */}
+      <img src={profile_img} alt="headshot" />
       <h1>
         <span>Michael Jang</span>
       </h1>

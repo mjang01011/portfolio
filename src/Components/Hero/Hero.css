@@ -2,15 +2,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 35px;
+  gap: 15px;
 }
 
 .hero img {
-  margin-top: 0px;
+  margin-top: 80px;
+  border-radius: 50%;
+  width: 20%;
 }
 
 .hero h1 {
-  margin-top: 100px; /* remove after adding picture */
   text-align: center;
   width: 70%;
   font-size: 90px;
