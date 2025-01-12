@@ -2,6 +2,7 @@ import "./AllBlogs.css";
 import theme_pattern from "../../assets/brush_skyblue.png";
 import notebook_data from "../../assets/notebook_data";
 import markdown_data from "../../assets/markdown_data";
+import paper_data from "../../assets/paper_data";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -15,6 +16,23 @@ const AllBlogs = () => {
       <div className="blog-title">
         <h1>Blogs</h1>
         <img src={theme_pattern} alt="" />
+      </div>
+      <h2 className="section-title">Paper Summary</h2>
+      <div className="blog-container">
+        {paper_data.map((ppt, index) => {
+          return (
+            <div key={index} className="blog-wrapper">
+              <a href={ppt.link} target="_blank" rel="noopener noreferrer" className="blog-link">
+                <h2>{ppt.name}</h2>
+                <ul>
+                  {ppt.contents.map((content, content_index) => (
+                    <li key={content_index}>{content}</li>
+                  ))}
+                </ul>
+              </a>
+            </div>
+          );
+        })}
       </div>
       <h2 className="section-title">Jupyter Notebook Implementation</h2>
       <div className="blog-container">
