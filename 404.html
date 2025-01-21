@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // Checks if the URL segment is missing (implying a direct navigation to a SPA route)
+    if (location.pathname.length > 1) {
+      // Redirects to the home page and includes the path, which React Router will handle
+      location.replace(
+        location.origin + '/#' + location.pathname + location.search + location.hash
+      );
+    }
+  </script>
+</head>
+<body>
+  <p>If you are not redirected, <a href="/">click here</a> to continue.</p>
+</body>
+</html>
