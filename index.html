@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,33 +16,28 @@
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
-      // This script helps to handle client-side routing by redirecting all navigation to index.html,
-      // allowing the React app to handle the route appropriately.
-      // It checks the URL query string for a redirect and converts it back into the correct url path.
-      (function() {
-        var location = window.location;
-        var query = location.search.substring(1);
-        if (query.length) {
-          var path = (query.match(/&?p=([^&]*)&?/) || [])[1];
-          var search = (query.match(/&?q=([^&]*)&?/) || [])[1] || '';
-          var hash = location.hash;
-
-          // The redirect path can be stored under the 'p' parameter, we check if it exists
-          if (path) {
-            path = decodeURIComponent(path.replace(/\+/g, '%20')); // Ensure special chars are correctly decoded
-            search = decodeURIComponent(search.replace(/\+/g, '%20'));
-
-            var newUrl = location.origin + '/' + path + (search ? '?' + search : '') + hash;
-            window.history.replaceState(null, null, newUrl);
-          }
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
         }
-      })();
+      }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
-</head>
-<body>
+  </head>
+  <body>
     <div id="root"></div>
-    <!-- Ensure the script tag points to the correct JavaScript bundle -->
-    <script type="module" src="static/js/main.js"></script> <!-- Adjust the src path as needed -->
-</body>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
