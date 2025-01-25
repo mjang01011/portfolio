@@ -4,19 +4,10 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-      (function() {
-        // Check if sessionStorage.redirect exists and if it's different from the current location
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect; // Remove it after checking to avoid redirect loops
-        if (redirect && redirect !== window.location.href) {
-          window.history.replaceState(null, null, redirect);
-        }
-      })();
-      // Store the current URL in sessionStorage before redirecting
-      sessionStorage.redirect = window.location.href;
-      // Redirect to the SPA's entry point, appending the original path and hash
-      window.location.href = '/portfolio/' + window.location.search + window.location.hash;
+      sessionStorage.redirect = location.href;
+      location.href = '/portfolio/' + location.pathname + location.search + location.hash;
     </script>
+    
 </head>
 <body>
     <p>If you are not redirected, <a href="/portfolio/">click here</a>.</p>
