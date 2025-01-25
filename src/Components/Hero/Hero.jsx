@@ -41,7 +41,8 @@ const Hero = () => {
           className="link"
           // to="https://drive.google.com/file/d/1eOWLpr9zoSrpK4tHbNpJ2Ago4IqtBFJv/view?usp=sharing"
           // to='https://drive.google.com/file/d/1DNqdXqSCdjiB-XmHwQRKGFAOK_DoCjkJ/view?usp=sharing'
-          to="https://drive.google.com/file/d/13G3q67apow7aBe52tIN9S-zfTXtERKqy/view?usp=sharing"
+          // to="https://drive.google.com/file/d/13G3q67apow7aBe52tIN9S-zfTXtERKqy/view?usp=sharing"
+          to="https://drive.google.com/file/d/1-HXFr9BkvEJxOJImMu26ZMuFJbfdTt1z/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
