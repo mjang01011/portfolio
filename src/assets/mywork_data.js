@@ -29,19 +29,19 @@ const mywork_data = [
     name: "Brain-Computer Interface Movement Decoding",
     img: project_ece580_2,
     stack: "Python (Scikit-learn)",
-    link: "https://bit.ly/4boLSsJ"
+    link: "https://drive.google.com/file/d/1VWQqM3ohCZXFCJnrR15xhND79L4aTuE1/view?usp=sharing"
   },
   {
     name: "Compressed Sensing Image Recovery",
     img: project_ece580_1,
     stack: "Python (Scikit-learn)",
-    link: "https://bit.ly/3K6Itmn"
+    link: "https://drive.google.com/file/d/1AuiJ1rZ7veAveK90xzW1UR_qCz3b5FC9/view?usp=sharing"
   },
   {
     name: "Spoken Arabic Digit Recognition",
     img: project_ece480,
     stack: "Python (Scikit-learn)",
-    link: "https://bit.ly/4bLbiRa"
+    link: "https://drive.google.com/file/d/1fwMBRUVSI-Qyt9gmquH5B-Ftc-TkV4N_/view?usp=sharing"
   },
 ];
 

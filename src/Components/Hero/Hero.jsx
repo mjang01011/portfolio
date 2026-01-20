@@ -15,10 +15,10 @@ const Hero = () => {
         I’m a 1st year Master’s student studying <span>Computer Science</span> at Stanford University, specializing in <span>AI</span>.
       </p>
       <p>
-        Currently, I am a software engineering intern at <span>AMD</span>, developing an agentic chatbot to accelerate debugging of next-generation server processors at the Server Platform Debugging team.
       </p>
       <p>
-        I graduated from Duke University with a double major in <span>Electrical & Computer Engineering</span> and <span>Computer Science</span>, specializing in <span>Machine Learning</span> and <span>AI</span>.
+        I graduated from Duke University with a double major in <span>Electrical & Computer Engineering</span> and <span>Computer Science</span>, specializing in <span>Machine Learning</span> and <span>AI</span>. 
+        Previously, I worked as a software engineering intern at <span>AMD</span>, developing an agentic chatbot to accelerate debugging of next-generation server processors at the Server Platform Debugging team using <span>MCP</span> and <span>RAG</span>.
       </p>
       <div className="logo">
         <Link
