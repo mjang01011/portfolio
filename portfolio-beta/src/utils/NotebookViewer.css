@@ -1,0 +1,14 @@
+.iframe-wrapper {
+  margin-top: 60px;
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.iframe {
+  width: 100%;
+  min-height: 100vh;
+  border: none;
+}
