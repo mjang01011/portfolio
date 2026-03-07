@@ -6,6 +6,17 @@ const markdown_data = [
   //   contents: []
   // },
   {
+    name: "WebDataset (vs. MapDataset) for Large Scale Training",
+    img: null,
+    link: "WebDataset (vs. MapDataset).md",
+    contents: [
+      "MapDataset vs IterableDataset",
+      "WebDataset for large-scale training",
+      "I/O bottleneck avoidance",
+      "Sharding format",
+    ],
+  },
+  {
     name: "Optimizers",
     img: null,
     link: "Optimizers.md",
