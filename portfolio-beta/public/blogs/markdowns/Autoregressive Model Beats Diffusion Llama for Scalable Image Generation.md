@@ -1,3 +1,5 @@
+Last Updated: 03/03/2026
+
 This blog post is my summary of the paper **"Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation"**.
 
 Can a vanilla autoregressive model like Llama, without inductive biases on visual signals (treating an image as a sequence of tokens), achieve SOTA image generation performance?

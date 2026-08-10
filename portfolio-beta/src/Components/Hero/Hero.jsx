@@ -1,7 +1,7 @@
 import "./Hero.css";
 import logo_github from "../../assets/logo_github.png";
 import logo_linkedin from "../../assets/logo_linkedin.png";
-import profile_img from "../../assets/headshot.jpg";
+import profile_img from "../../assets/headshot.jpeg";
 import stanford_logo from "../../assets/stanford_logo.png";
 import duke_logo from "../../assets/duke_logo.png";
 import { Link } from "react-router-dom";
@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
           <Link
             className="hero-resume"
-            to="https://drive.google.com/file/d/1p2f8RvdUFpFSrwlPDQyXx2_qGsicg2rg/view?usp=sharing"
+            to="https://drive.google.com/file/d/1cRpAN6bhvlZQcMYLHNT41880Fo21kNKv/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
