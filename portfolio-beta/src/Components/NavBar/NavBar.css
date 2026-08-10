@@ -15,17 +15,28 @@
   transition: background 0.3s ease;
 }
 
+/* Single scrollable row rather than wrapping, so the fixed navbar
+   never grows taller than the scroll offset the links rely on. */
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 32px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-menu::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-menu li {
   font-size: 14px;
   font-weight: 500;
   color: var(--text-primary);
+  white-space: nowrap;
   cursor: pointer;
   transition: color 0.2s ease;
 }
@@ -38,6 +49,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-shrink: 0;
 }
 
 .theme-toggle {
@@ -62,20 +74,40 @@
   gap: 16px;
 }
 
-.nav-link img {
+.nav-link img,
+.nav-link svg {
+  display: block;
   width: 24px;
   height: 24px;
   opacity: 0.7;
   transition: opacity 0.2s ease;
 }
 
-.nav-link:hover img {
+.nav-link svg {
+  color: var(--text-primary);
+}
+
+/* The PNG marks are solid black, so they need inverting to stay visible
+   next to the currentColor icon in dark mode. */
+[data-theme="dark"] .nav-link img {
+  filter: invert(1);
+}
+
+.nav-link:hover img,
+.nav-link:hover svg {
   opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: 22px;
+  }
 }
 
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 16px;
+    gap: 12px;
   }
 
   .nav-menu {
@@ -94,7 +126,8 @@
     padding: 6px;
   }
 
-  .nav-link img {
+  .nav-link img,
+  .nav-link svg {
     width: 20px;
     height: 20px;
   }

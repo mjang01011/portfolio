@@ -22,6 +22,9 @@
   --card-bg: #ffffff;
   --overlay-bg: rgba(0, 0, 0, 0.6);
   --text-on-accent: #ffffff;
+  --scrollbar-track: #e8e8ed;
+  --scrollbar-thumb: #c7c7cc;
+  --scrollbar-thumb-hover: #aeaeb2;
 }
 
 [data-theme="dark"] {
@@ -42,10 +45,18 @@
   --card-bg: #1c1c1e;
   --overlay-bg: rgba(0, 0, 0, 0.7);
   --text-on-accent: #ffffff;
+  --scrollbar-track: #2c2c2e;
+  --scrollbar-thumb: #48484a;
+  --scrollbar-thumb-hover: #636366;
+}
+
+img {
+  max-width: 100%;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

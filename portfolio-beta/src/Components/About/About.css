@@ -39,7 +39,7 @@
 .timeline-section-title {
   font-size: 18px;
   font-weight: 600;
-  color: #6e6e73;
+  color: var(--text-tertiary);
   margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -52,6 +52,7 @@
   padding-bottom: 12px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 .timeline-scroll::-webkit-scrollbar {
@@ -59,17 +60,17 @@
 }
 
 .timeline-scroll::-webkit-scrollbar-track {
-  background: #e8e8ed;
+  background: var(--scrollbar-track);
   border-radius: 4px;
 }
 
 .timeline-scroll::-webkit-scrollbar-thumb {
-  background: #c7c7cc;
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 
 .timeline-scroll::-webkit-scrollbar-thumb:hover {
-  background: #aeaeb2;
+  background: var(--scrollbar-thumb-hover);
 }
 
 .timeline-card {
@@ -82,6 +83,7 @@
   transition: box-shadow 0.2s ease, background 0.3s ease;
   scroll-snap-align: start;
   box-shadow: 0 2px 8px var(--shadow);
+  overflow-wrap: break-word;
 }
 
 .timeline-card:hover {
@@ -170,20 +172,25 @@
   border-radius: 6px;
 }
 
+/* Animating a 0fr -> 1fr row lets the panel expand to its true content
+   height, so tall details on narrow screens are never clipped. */
 .timeline-details-wrapper {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   overflow: hidden;
-  transition: max-height 0.35s ease-out, opacity 0.25s ease;
+  transition: grid-template-rows 0.35s ease-out, opacity 0.25s ease;
   opacity: 0;
 }
 
 .timeline-details-wrapper.expanded {
-  max-height: 800px;
+  grid-template-rows: 1fr;
   opacity: 1;
-  transition: max-height 0.4s ease-in, opacity 0.3s ease;
+  transition: grid-template-rows 0.4s ease-in, opacity 0.3s ease;
 }
 
 .timeline-details {
+  min-height: 0;
+  overflow: hidden;
   margin-top: 16px;
   padding-top: 16px;
   border-top: 1px solid var(--border);
@@ -191,8 +198,8 @@
   font-size: 15px;
   font-weight: 400;
   color: var(--text-secondary);
-  color: #424245;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .timeline-details li {
@@ -203,14 +210,168 @@
   margin-bottom: 0;
 }
 
+.timeline-section[id] {
+  scroll-margin-top: 100px;
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pub-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px var(--shadow);
+  overflow-wrap: break-word;
+  transition: box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.pub-card:hover {
+  box-shadow: 0 4px 16px var(--shadow-hover);
+}
+
+.pub-thumb {
+  flex: 1 1 240px;
+  max-width: 300px;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  line-height: 0;
+}
+
+/* contain keeps tall or wide thumbnails undistorted inside the card */
+.pub-thumb img {
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.pub-thumb:hover img {
+  transform: scale(1.03);
+}
+
+.pub-body {
+  flex: 999 1 280px;
+  min-width: 0;
+}
+
+.pub-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.pub-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pub-title a:hover {
+  color: var(--accent);
+}
+
+.pub-authors {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* keeps a superscript from being orphaned onto the next line */
+.pub-author {
+  white-space: nowrap;
+}
+
+.pub-author-me {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pub-authors sup,
+.pub-affiliations sup {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: 1px;
+}
+
+.pub-affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 14px;
+  row-gap: 2px;
+  font-size: 13px;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.pub-affiliations .pub-note {
+  font-style: italic;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pub-link {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 980px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pub-link:hover {
+  background: var(--accent);
+  color: var(--text-on-accent);
+}
+
 @media (max-width: 768px) {
   .about {
     padding: 60px 16px;
   }
 
+  /* Each card sizes to the track so one fills the screen with a peek of the
+     next, and only the opened card grows instead of the whole row. */
+  .timeline-scroll {
+    gap: 16px;
+    align-items: flex-start;
+  }
+
   .timeline-card {
-    flex: 0 0 280px;
-    min-width: 260px;
+    flex: 0 0 min(86%, 320px);
+    min-width: 0;
+    padding: 18px 20px;
+  }
+
+  .pub-card {
+    gap: 16px;
+    padding: 18px 20px;
+  }
+
+  .pub-thumb {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
@@ -219,8 +380,29 @@
     padding: 48px 12px;
   }
 
+  .timeline-scroll {
+    gap: 14px;
+  }
+
   .timeline-card {
-    flex: 0 0 260px;
-    min-width: 240px;
+    flex-basis: 88%;
+    padding: 16px 18px;
+  }
+
+  .pub-card {
+    padding: 16px;
+  }
+
+  .pub-title {
+    font-size: 16px;
+  }
+
+  .pub-links {
+    gap: 8px;
+  }
+
+  .pub-link {
+    padding: 6px 14px;
+    font-size: 13px;
   }
 }

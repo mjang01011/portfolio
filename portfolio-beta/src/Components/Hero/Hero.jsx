@@ -4,6 +4,7 @@ import logo_linkedin from "../../assets/logo_linkedin.png";
 import profile_img from "../../assets/headshot.jpeg";
 import stanford_logo from "../../assets/stanford_logo.png";
 import duke_logo from "../../assets/duke_logo.png";
+import GoogleScholarIcon from "../Icons/GoogleScholarIcon";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -44,6 +45,15 @@ const Hero = () => {
               rel="noopener noreferrer"
             >
               <img src={logo_github} alt="GitHub" />
+            </Link>
+            <Link
+              className="hero-link"
+              to="https://scholar.google.com/citations?user=LizEmAIAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar"
+            >
+              <GoogleScholarIcon />
             </Link>
           </div>
           <Link

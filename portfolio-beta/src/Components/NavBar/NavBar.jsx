@@ -1,6 +1,7 @@
 import "./NavBar.css";
 import logo_github from "../../assets/logo_github.png";
 import logo_linkedin from "../../assets/logo_linkedin.png";
+import GoogleScholarIcon from "../Icons/GoogleScholarIcon";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -8,6 +9,7 @@ const NavBar = () => {
   const { isDark, toggleTheme } = useTheme();
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
+    if (!element) return;
     const headerOffset = 80;
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.scrollY - headerOffset;
@@ -23,6 +25,9 @@ const NavBar = () => {
       <ul className="nav-menu">
         <li onClick={() => scrollToSection("hero")}>Home</li>
         <li onClick={() => scrollToSection("about")}>About</li>
+        <li onClick={() => scrollToSection("experiences")}>Experiences</li>
+        <li onClick={() => scrollToSection("research")}>Research</li>
+        <li onClick={() => scrollToSection("publications")}>Publications</li>
         <li onClick={() => scrollToSection("skills")}>Skills</li>
         <li onClick={() => scrollToSection("mywork")}>Projects</li>
         <li onClick={() => scrollToSection("blog")}>Blog</li>
@@ -69,6 +74,15 @@ const NavBar = () => {
           aria-label="GitHub"
         >
           <img src={logo_github} alt="GitHub" />
+        </Link>
+        <Link
+          className="nav-link"
+          to="https://scholar.google.com/citations?user=LizEmAIAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Scholar"
+        >
+          <GoogleScholarIcon />
         </Link>
         </div>
       </div>

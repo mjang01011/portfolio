@@ -1,10 +1,12 @@
 import "./About.css";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 import sail_logo from "../../assets/sail_logo.jpg";
 import duke_logo from "../../assets/duke_logo.png";
 import nvidia_logo from "../../assets/nvidia_logo.png";
 import google_logo from "../../assets/google_logo.png";
 import amd_logo from "../../assets/amd_logo.png";
+import gpic_thumbnail from "../../assets/gpic.jpeg";
 
 const orgLogos = {
   "Stanford Vision and Learning Lab (SVL)": sail_logo,
@@ -18,6 +20,8 @@ const orgLogos = {
 
 const experiences = [
   {
+    id: "svl-researcher",
+    group: "research",
     title: "Machine Learning Researcher",
     location: "Stanford, CA, USA",
     org: "Stanford Vision and Learning Lab (SVL)",
@@ -28,6 +32,8 @@ const experiences = [
     ],
   },
   {
+    id: "carin-researcher",
+    group: "research",
     title: "Machine Learning Researcher",
     location: "Durham, NC, USA",
     org: "Advised by Dr. Lawrence Carin, Duke University",
@@ -39,6 +45,8 @@ const experiences = [
     ],
   },
   {
+    id: "aimind-researcher",
+    group: "research",
     title: "Machine Learning Researcher",
     location: "Durham, NC, USA",
     org: "aiMIND Study Group, Duke University",
@@ -50,6 +58,8 @@ const experiences = [
     ],
   },
   {
+    id: "nvidia-intern",
+    group: "experience",
     title: "Incoming Software Engineering Intern",
     location: "",
     org: "NVIDIA",
@@ -58,14 +68,21 @@ const experiences = [
     details: ["GPU Compute Software QA"],
   },
   {
-    title: "Incoming Software Engineering Intern",
+    id: "google-intern",
+    group: "experience",
+    title: "Software Engineering Intern",
     location: "",
     org: "Google",
-    dates: "Incoming Summer 2026",
-    incoming: true,
-    details: ["GCP Networking, LLMs"],
+    dates: "June 2026 – September 2026",
+    incoming: false,
+    details: [
+      "Engineered a Gemini multi-agent postmortem generation pipeline for the Google Cloud Networking team to automate data collection, incident analysis, and reduce report drafting time from days to hours.",
+      "Implemented a scalable evaluation framework utilizing an LLM-as-a-Judge architecture and human-in-the-loop refinement to guarantee the technical accuracy and reliability of generated incident diagnostics.",
+    ],
   },
   {
+    id: "amd-intern",
+    group: "experience",
     title: "Software Engineering Intern",
     location: "Austin, TX, USA",
     org: "AMD (Advanced Micro Devices, Inc.)",
@@ -78,6 +95,8 @@ const experiences = [
     ],
   },
   {
+    id: "duke-ta",
+    group: "experience",
     title: "Teaching Assistant",
     location: "Durham, NC, USA",
     org: "Duke University",
@@ -90,6 +109,93 @@ const experiences = [
     ],
   },
 ];
+
+const publications = [
+  {
+    title: "GPIC: A Giant Permissive Image Corpus for Visual Generation",
+    thumbnail: gpic_thumbnail,
+    authors: [
+      { name: "Keshigeyan Chandrasegaran", marks: "*,1" },
+      { name: "Kyle Sargent", marks: "*,1" },
+      { name: "Suchir Agarwal", marks: "1" },
+      { name: "Michael Jang", marks: "1", highlight: true },
+      { name: "Michael Poli", marks: "1,2" },
+      { name: "Juan Carlos Niebles", marks: "1,4" },
+      { name: "Justin Johnson", marks: "3" },
+      { name: "Jiajun Wu", marks: "1" },
+      { name: "Li Fei-Fei", marks: "1" },
+    ],
+    affiliations: [
+      { mark: "1", name: "Stanford University" },
+      { mark: "2", name: "Radical Numerics" },
+      { mark: "3", name: "University of Michigan" },
+      { mark: "4", name: "Salesforce Research" },
+    ],
+    note: "* Equal contribution",
+    links: [
+      { label: "Project Page", href: "https://gpic.stanford.edu/" },
+      { label: "Paper", href: "https://arxiv.org/abs/2605.30341" },
+      { label: "Dataset", href: "https://huggingface.co/datasets/stanford-vision-lab/gpic" },
+      { label: "Code", href: "https://github.com/keshik6/gpic" },
+    ],
+  },
+];
+
+const PublicationCard = ({ publication }) => {
+  return (
+    <article className="pub-card">
+      <Link
+        className="pub-thumb"
+        to={publication.links[0].href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${publication.title} project page`}
+      >
+        <img src={publication.thumbnail} alt={publication.title} />
+      </Link>
+      <div className="pub-body">
+        <h4 className="pub-title">
+          <Link to={publication.links[0].href} target="_blank" rel="noopener noreferrer">
+            {publication.title}
+          </Link>
+        </h4>
+        <p className="pub-authors">
+          {publication.authors.map((author, i) => (
+            <Fragment key={author.name}>
+              <span className="pub-author">
+                <span className={author.highlight ? "pub-author-me" : undefined}>{author.name}</span>
+                <sup>{author.marks}</sup>
+              </span>
+              {i < publication.authors.length - 1 && ", "}
+            </Fragment>
+          ))}
+        </p>
+        <p className="pub-affiliations">
+          {publication.affiliations.map((affiliation) => (
+            <span key={affiliation.mark}>
+              <sup>{affiliation.mark}</sup>
+              {affiliation.name}
+            </span>
+          ))}
+          <span className="pub-note">{publication.note}</span>
+        </p>
+        <div className="pub-links">
+          {publication.links.map((link) => (
+            <Link
+              key={link.label}
+              className="pub-link"
+              to={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+};
 
 const ExperienceCard = ({ experience, isExpanded, onToggle }) => {
   return (
@@ -124,8 +230,13 @@ const ExperienceCard = ({ experience, isExpanded, onToggle }) => {
 const About = () => {
   const [expandedId, setExpandedId] = useState(null);
 
-  const researchExperiences = experiences.slice(0, 3);
-  const experiencesList = experiences.slice(3, 7);
+  const researchExperiences = experiences.filter((exp) => exp.group === "research");
+  const experiencesList = experiences.filter((exp) => exp.group === "experience");
+
+  const toggleCard = (id) => (e) => {
+    e.stopPropagation();
+    setExpandedId((current) => (current === id ? null : id));
+  };
 
   return (
     <section id="about" className="about">
@@ -141,35 +252,37 @@ const About = () => {
         </div>
 
         <div className="timeline-wrapper">
-          <div className="timeline-section">
-            <h3 className="timeline-section-title">Research</h3>
+          <div className="timeline-section" id="experiences">
+            <h3 className="timeline-section-title">Experiences</h3>
             <div className="timeline-scroll">
-              {researchExperiences.map((exp, i) => (
+              {experiencesList.map((exp) => (
                 <ExperienceCard
-                  key={i}
+                  key={exp.id}
                   experience={exp}
-                  isExpanded={expandedId === i}
-                  onToggle={(e) => {
-                    e.stopPropagation();
-                    setExpandedId(expandedId === i ? null : i);
-                  }}
+                  isExpanded={expandedId === exp.id}
+                  onToggle={toggleCard(exp.id)}
                 />
               ))}
             </div>
           </div>
-          <div className="timeline-section">
-            <h3 className="timeline-section-title">Experiences</h3>
+          <div className="timeline-section" id="research">
+            <h3 className="timeline-section-title">Research</h3>
             <div className="timeline-scroll">
-              {experiencesList.map((exp, i) => (
+              {researchExperiences.map((exp) => (
                 <ExperienceCard
-                  key={3 + i}
+                  key={exp.id}
                   experience={exp}
-                  isExpanded={expandedId === 3 + i}
-                  onToggle={(e) => {
-                    e.stopPropagation();
-                    setExpandedId(expandedId === 3 + i ? null : 3 + i);
-                  }}
+                  isExpanded={expandedId === exp.id}
+                  onToggle={toggleCard(exp.id)}
                 />
+              ))}
+            </div>
+          </div>
+          <div className="timeline-section" id="publications">
+            <h3 className="timeline-section-title">Publications</h3>
+            <div className="pub-list">
+              {publications.map((publication) => (
+                <PublicationCard key={publication.title} publication={publication} />
               ))}
             </div>
           </div>
